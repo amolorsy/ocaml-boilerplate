@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: a60b7aba180e9de2a7569c647c0590d7)
+# DO NOT EDIT (digest: 712b994372ff448b15c2bbf2d4dcbf8e)
 # Ignore VCS directories, you can use the same kind of rule outside
 # OASIS_START/STOP if you want to exclude directories that contains
 # useless stuff for the build process
@@ -15,4 +15,6 @@ true: annot, bin_annot
 "_darcs": -traverse
 "_darcs": not_hygienic
 # Executable ocaml-boilerplate
+<src/main.{native,byte}>: pkg_unix
+<src/*.ml{,i,y}>: pkg_unix
 # OASIS_STOP

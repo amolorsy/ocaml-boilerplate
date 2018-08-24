@@ -10,6 +10,7 @@ Executable "ocaml-boilerplate"
   BuildTools: ocamlbuild
   MainIs:     main.ml
   CompiledObject: best
+  BuildDepends: unix
 SourceRepository "ocaml-boilerplate"
   Type:       git
   Location:   https://github.com/amolorsy/ocaml-boilerplate.git
