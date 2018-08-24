@@ -17,3 +17,4 @@ SourceRepository master
 Executable "ocaml-boilerplate"
   Path: src
   MainIs: main.ml
+  CompiledObject: best
