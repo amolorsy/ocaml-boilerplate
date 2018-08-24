@@ -1,20 +1,15 @@
-Name: ocaml-boilerplate
-Version: 0.1.0
-Synopsis: A command line tool to create a new ocaml project easily
-Authors: Gyu Kang <hello@gyukang.me>
-License: MIT
-
-OASISFormat: 0.4
-BuildTools: ocamlbuild
-Plugins: META (0.4), DevFiles (0.4)
-
-SourceRepository master
-  Type: git
-  Location: https://github.com/amolorsy/ocaml-boilerplate.git
-  Branch: master
-  Browser: https://github.com/amolorsy/ocaml-boilerplate
-
+OASISFormat:  0.4
+Name:         ocaml-boilerplate
+Version:      0.1.0
+Synopsis:     A command line tool to create a new ocaml project easily
+Authors:      Gyu Kang <hello@gyukang.me>
+License:      MIT
+Plugins:      META (0.4), StdFiles (0.4), DevFiles (0.4)
 Executable "ocaml-boilerplate"
-  Path: src
-  MainIs: main.ml
+  Path:       src
+  BuildTools: ocamlbuild
+  MainIs:     main.ml
   CompiledObject: best
+SourceRepository "ocaml-boilerplate"
+  Type:       git
+  Location:   https://github.com/amolorsy/ocaml-boilerplate.git
