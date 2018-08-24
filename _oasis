@@ -1,0 +1,9 @@
+Name: ocaml-boilerplate
+Version: 0.1.0
+Synopsis: A command line tool to create a new ocaml project easily
+Authors: Gyu Kang <hello@gyukang.me>
+License: MIT
+
+OASISFormat: 0.4
+BuildTools: ocamlbuild
+Plugins: META (0.4), DevFiles (0.4)
