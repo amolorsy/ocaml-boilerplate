@@ -7,3 +7,13 @@ License: MIT
 OASISFormat: 0.4
 BuildTools: ocamlbuild
 Plugins: META (0.4), DevFiles (0.4)
+
+SourceRepository master
+  Type: git
+  Location: https://github.com/amolorsy/ocaml-boilerplate.git
+  Branch: master
+  Browser: https://github.com/amolorsy/ocaml-boilerplate
+
+Executable "ocaml-boilerplate"
+  Path: src
+  MainIs: main.ml
