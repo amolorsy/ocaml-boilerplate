@@ -17,30 +17,45 @@ let display_usage () = print_endline
     ocaml-boilerplate help                  Display full usage
     ocaml-boilerplate new <project_name>    Create a new project which is named <project_name>"
 
+let set_print_color (code: string) = print_string code
+
+let reset_print_color () = Printf.printf "\027[0m%!"
+
 let create_project (project_name: string) =
-  Printf.printf "Creating a project '%s'...\n" project_name;
+  set_print_color "\027[1;4;32m";
+  Printf.printf "Creating a project '%s'...\n\n%!" project_name;
+  reset_print_color();
   
   Unix.mkdir project_name 0o755;
   Sys.chdir project_name;
 
   let quickstart_command = "oasis quickstart" in
+  set_print_color "\027[1;4;32m";
   Printf.printf "Running '%s'...\n%!" quickstart_command;
+  reset_print_color();
   ignore (Sys.command quickstart_command);
+  set_print_color "\027[1;4;32m";
   print_endline "[OK] A file '_oasis' was created.\n";
 
   let setup_command = "oasis setup" in
   Printf.printf "Running '%s'...\n%!" setup_command;
+  reset_print_color();
   ignore (Sys.command setup_command);
+  set_print_color "\027[1;4;32m";
   print_endline "[OK] A file 'setup.ml' was created.\n";
 
   let configure_command = "ocaml setup.ml -configure" in 
   Printf.printf "Running '%s'...\n%!" configure_command;
+  reset_print_color();
   ignore (Sys.command configure_command);
 
-  let build_command = "ocaml setup.ml -build" in 
+  let build_command = "ocaml setup.ml -build" in
+  set_print_color "\027[1;4;32m";
   Printf.printf "Running '%s'...\n%!" build_command;
+  reset_print_color();
   ignore (Sys.command build_command);
 
+  set_print_color "\027[1;4;32m";
   Printf.printf "\nA project '%s' was created successfully!\n%!" project_name
 
 let run (command: command) =
