@@ -6,13 +6,12 @@
 ## Installation
 ```
 $ git clone https://github.com/amolorsy/ocaml-boilerplate.git
-$ make
-$ make -install
+$ make install
 ```
 
 ## Usage
 #### Create a new project
 ```
-ocaml-boilerplate new <project_name>
+$ ocaml-boilerplate new <project_name>
 ```
 Run `$ ocaml-boilerplate help` to see full usages

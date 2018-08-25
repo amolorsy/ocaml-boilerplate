@@ -1,0 +1,12 @@
+# OASIS_START
+# DO NOT EDIT (digest: 5ddbf929ab6d434973403d7b5e4a48b4)
+version = "0.1.0"
+description = "A command line tool to create a new ocaml project easily"
+requires = "unix"
+archive(byte) = "command.cma"
+archive(byte, plugin) = "command.cma"
+archive(native) = "command.cmxa"
+archive(native, plugin) = "command.cmxs"
+exists_if = "command.cma"
+# OASIS_STOP
+
